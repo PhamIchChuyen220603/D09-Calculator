@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="calc-body">
+    <div class="calc-screen">
+      <div class="calc-typed">
+        {{ (count$ | async)?.count ?? 0}}
+        <br />
+        {{ (count$ | async)?.previousNumber ?? 0}}
+
+      </div>
+      <div class="calc-typed">
+        {{ (count$ | async)?.result ?? 0}}
+      </div>
+    </div>
+
+    <div class="calc-button-row">
+      <div class="button grey" (click)="enterKey('AC','operator')">AC</div>
+      <div class="button grey" (click)="enterKey('+/-','operator')">+/-</div>
+      <div class="button grey" (click)="enterKey('%','operator')">%</div>
+      <div class="button orange" (click)="enterKey('/','operator')">/</div> 
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="enterKey('7','number')">7</div>
+      <div class="button" (click)="enterKey('8','number')">8</div>
+      <div class="button" (click)="enterKey('9','number')">9</div>
+      <div class="button orange" (click)="enterKey('*','operator')">x</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="enterKey('4','number')">4</div>
+      <div class="button" (click)="enterKey('5','number')">5</div>
+      <div class="button" (click)="enterKey('6','number')">6</div>
+      <div class="button orange" (click)="enterKey('-','operator')">-</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button" (click)="enterKey('1','number')">1</div>
+      <div class="button" (click)="enterKey('2','number')">2</div>
+      <div class="button" (click)="enterKey('3','number')">3</div>
+      <div class="button orange" (click)="enterKey('+','operator')">+</div>
+    </div>
+    <div class="calc-button-row">
+      <div class="button " (click)="enterKey('C','operator')">C</div>
+      <div class="button" (click)="enterKey('0','number')">0</div>
+      <div class="button c" (click)="enterKey(',','operator')">,</div>
+      <div class="button orange" (click)="enterKey('=','operator')">=</div>
+    </div>
+    </div>
+  </div>
+<!-- </div> -->
+<!-- <router-outlet></router-outlet> -->
